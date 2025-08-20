@@ -1,0 +1,14 @@
+import csv
+
+urls = [
+    "https://www.amazon.com/SUPFINE-Compatible-Protection-Translucent-Anti-Fingerprint/dp/B0D9VRKZ1D?pd_rd_w=kJQdM&content-id=amzn1.sym.f089f9cf-a233-4ca4-a53e-cc1f5dde5545&pf_rd_p=f089f9cf-a233-4ca4-a53e-cc1f5dde5545&pf_rd_r=1E69EAW25SG8X884QJEM&pd_rd_wg=II4nv&pd_rd_r=2805e12b-b98e-47e1-bbc6-119b5a1f2a1d&pd_rd_i=B0D9VRKZ1D&th=1",
+    "https://www.amazon.com/JAME-14-Compatible-Military-Grade-Translucent/dp/B0CJTH6PBF/ref=slsr_d_dpds_fsdp4star_fa_xcat_cheapdynam_d_sccl_2_4/137-7965013-2467645?pd_rd_w=S8kGY&content-id=amzn1.sym.189ba0e8-243a-408f-947d-77c5ac846d2e&pf_rd_p=189ba0e8-243a-408f-947d-77c5ac846d2e&pf_rd_r=0T6334VCKZRTDTFWEQYY&pd_rd_wg=UD7YO&pd_rd_r=52b0ebbf-64bb-44fb-b44b-db69f8f54ae7&pd_rd_i=B0CJTH6PBF&th=1",
+    "https://www.amazon.com/dp/B0C372SJWJ/ref=sspa_dk_detail_1?pf_rd_p=c4606765-78ec-444e-9319-716ceb6c5a61&pf_rd_r=Y16Z59B3CM739XDZ6DGY&pd_rd_wg=ZaE3h&pd_rd_w=8RznV&content-id=amzn1.sym.c4606765-78ec-444e-9319-716ceb6c5a61&pd_rd_r=d7d6e3cd-11c6-4902-adf4-9754597201c0&s=wireless&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM&th=1",
+    "https://www.amazon.com/dp/B0DJJJHVP1/ref=sspa_dk_detail_2?pf_rd_p=386c274b-4bfe-4421-9052-a1a56db557ab&pf_rd_r=TQPXKWYJD37KYFC0YC7V&pd_rd_wg=NbsBy&pd_rd_w=e9jMt&content-id=amzn1.sym.386c274b-4bfe-4421-9052-a1a56db557ab&pd_rd_r=9588efb5-9d9c-4b9b-8b49-366b568ceb00&s=wireless&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM&th=1",
+    "https://www.amazon.com/TORRAS-Ultra-Thin-Compatible-Lightweight-Anti-Scratch/dp/B0CBJG315D/ref=slsr_d_dpds_fsdp4star_fa_xcat_cheapdynam_d_sccl_3_6/137-7965013-2467645?pd_rd_w=slYOV&content-id=amzn1.sym.189ba0e8-243a-408f-947d-77c5ac846d2e&pf_rd_p=189ba0e8-243a-408f-947d-77c5ac846d2e&pf_rd_r=B0RA38J3PJZJPFWW5RG0&pd_rd_wg=Wa65a&pd_rd_r=d910e985-0ca1-486e-adf8-0af3e969bde9&pd_rd_i=B0CBJG315D&th=1",
+]
+
+with open("url_file.csv", "w", newline="") as file:
+    writer = csv.writer(file)
+    for url in urls:
+        writer.writerow([url])
